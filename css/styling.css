@@ -1,0 +1,189 @@
+ @import url("https://fonts.googleapis.com/css?family=Tangerine|Playfair Display|Sacramento|Great Vibes|Dancing Script|Cinzel|Lora|Italianno");
+
+
+
+
+ body {
+    font-family: 'Lora', serif;
+    background-color: #F7F7FF;
+    color: #495867;
+    max-width: 100%;
+}
+
+
+
+
+/* Styling for header, navigation */
+header {
+    padding: 1em;
+}
+
+
+nav a {
+    padding: 2em 0.5;
+    margin: 1em 0.4em;
+    font: bold 1.25em 'Lora'; /*TODO: add family fonts */
+    text-decoration: none;
+    color: #495867;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.main-page-header, .blog-page-main-header {
+    font: 500 4rem 'Italianno'; /*TODO: add fallback font family*/
+    text-align: center;
+    color: #577399;
+}
+
+
+
+/* styling main body */
+main {
+    padding: 1em;
+}
+
+
+.blog-card {
+    margin: 1%;
+    padding: 2.5%;
+    background-color: #DAE6F5;
+    border-radius: 2%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 0px #000;
+}
+
+
+.blog-card:hover {
+    transform: scale(1.01); /*Make the dive appear slightly larger*/
+    box-shadow: 5px 5px 15px rgb(0,0,0,0.3); /*add shdow to five effect of being lifting*/
+}
+
+
+h3 {
+    font: bold 24px 'Lora' ;
+    color: #42779D;
+}
+
+
+figcaption {
+    font-size: 14px;
+    font-style: italic;
+    padding: 0.25em;
+}
+
+
+img {
+    border-radius: 2%;
+}
+
+/* Blog post page main section styling */
+.blog-page-main {
+    margin: 0.5em;
+}
+
+
+.blog-page-intro-parg {
+    text-indent: 1.5em;
+}
+
+
+.blog-page-figure {
+    background-color: #DAE6F5;
+    padding: 0.5em;
+    border-radius: 2%;
+    margin: 0.7em 0;
+}
+
+/* style sidebar header */
+h5 {
+    font: bold 1em 'Lara';
+}
+
+
+.list-activites {
+    list-style-type: disc;
+    margin-left: 2em;
+}
+
+
+.budjet-header {
+    margin: 0.5em 0;
+}
+
+
+.budjet-table {
+    background-color: #DAE6F5;
+    border-radius: 3%;
+    width: 100%;
+}
+
+
+th,td {
+    padding: 0.75rem;
+    vertical-align: top;
+}
+
+
+td {
+    border-top: 1px solid #495867;
+}
+
+
+thead, th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #495867;
+}
+
+
+tbody {
+    border-top: 1.5px solid red;
+} 
+
+
+aside {
+    padding: 0.5em;
+    margin: 0.8em;
+}
+
+
+.author-greeting {
+    font-size: 13px;
+    margin-left:1em;
+}
+
+
+li {
+    padding-left: 1em;
+    margin: 0.25em;
+}
+
+
+h4 {
+    font: bold 14px Arial;
+    margin-top: 1em;
+}
+
+
+a {
+    color: #577399;
+}
+
+
+.social-media {
+    font-size: 30px;
+}
+
+
+footer {
+    padding: 0.5em;
+}
+
+
+.footer-item {
+    /* white-space: nowrap; */
+    margin-left: 1em; /*TODO: make small gap between them */
+}

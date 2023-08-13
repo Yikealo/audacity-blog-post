@@ -1,0 +1,147 @@
+
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "hd"
+    "main"
+    "sd"
+    "ft";
+}
+
+
+
+header {
+    grid-area: hd;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+/* main content layout */
+main {
+    grid-area: main;
+}
+
+
+.home-page-main {
+    display: grid;
+    grid-template: auto auto auto auto / 1fr;
+    grid-template-areas: 
+    "ve"
+    "ba"
+    "mo"
+    "ky";
+    gap: 0.5em; /* TODO: make sure this belongs here */
+}
+
+
+.blog-card {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+.blog-page-main {
+    display: flex;
+    flex-flow: column nowrap; /*TODO: improve this*/
+    /*TODO: figure out how to space them*/
+}
+
+
+
+/* Side bar layout */
+aside {
+    grid-area: sd;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+.author-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.author-img {
+    max-width: 100%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+.social-media {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1em;
+}
+
+
+footer {
+    grid-area: ft;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.footer-item {
+    flex-shrink: 3;
+}
+
+
+
+/* Layout for tablets */
+@media(min-width:768px) and (max-width: 1023px){
+
+    body {
+        background-color: red;
+    }
+
+    .home-page-main {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-area: main;
+        grid-template-areas: 
+        "ve ba"
+        "mo ky";
+        padding: 1em;
+    }
+}
+
+
+/* Layout for large screen */
+@media(min-width: 1024px){
+
+    .container {
+        display:grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+        "hd hd"
+        "main sd"
+        "ft ft";
+        align-content: end; 
+    }
+    
+
+    .home-page-main {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-area: main;
+        grid-template-areas: 
+        "ve ba"
+        "mo ky";
+        padding: 1em;
+    }   
+}

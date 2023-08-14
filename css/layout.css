@@ -1,14 +1,18 @@
 
 
+
+
 .container {
+    min-height: 100vh;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto 1fr auto auto;
     grid-template-areas:
     "hd"
     "main"
     "sd"
     "ft";
+    gap: 1rem;
 }
 
 
@@ -17,6 +21,13 @@ header {
     grid-area: hd;
     display: flex;
     flex-flow: column nowrap;
+}
+
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem
 }
 
 
@@ -49,12 +60,28 @@ img {
 }
 
 
-.blog-page-main {
+.article-body {
     display: flex;
-    flex-flow: column nowrap; /*TODO: improve this*/
-    /*TODO: figure out how to space them*/
+    flex-flow: column nowrap; 
+    gap: 0.5rem; 
 }
 
+
+/* mina for subscribe */
+.subscribe-main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.subscribe-form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 
 /* Side bar layout */
@@ -62,6 +89,7 @@ aside {
     grid-area: sd;
     display: flex;
     flex-flow: column wrap;
+    gap: 1rem;
 }
 
 
@@ -72,10 +100,16 @@ aside {
 }
 
 
+.author-name-title-bio {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
 .author-img {
     max-width: 100%;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
 }
 
@@ -132,6 +166,7 @@ footer {
         "main sd"
         "ft ft";
         align-content: end; 
+        gap: 1rem;
     }
     
 
@@ -143,5 +178,6 @@ footer {
         "ve ba"
         "mo ky";
         padding: 1em;
+        gap: 1rem;
     }   
 }

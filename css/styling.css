@@ -1,28 +1,31 @@
  @import url("https://fonts.googleapis.com/css?family=Tangerine|Playfair Display|Sacramento|Great Vibes|Dancing Script|Cinzel|Lora|Italianno");
 
 
-
+ 
 
  body {
     font-family: 'Lora', serif;
     background-color: #F7F7FF;
     color: #495867;
-    max-width: 100%;
 }
 
 
+.container {
+    margin: 0 0.5rem;
+}
+
+
+header,
+main,
+aside,
+footer {
+    padding: 1rem;
+}
 
 
 /* Styling for header, navigation */
-header {
-    padding: 1em;
-}
-
-
 nav a {
-    padding: 2em 0.5;
-    margin: 1em 0.4em;
-    font: bold 1.25em 'Lora'; /*TODO: add family fonts */
+    font: bold 1.25rem 'Lora', serif;
     text-decoration: none;
     color: #495867;
 }
@@ -34,26 +37,19 @@ nav a:hover {
 
 
 .main-page-header, .blog-page-main-header {
-    font: 500 4rem 'Italianno'; /*TODO: add fallback font family*/
+    font: 500 clamp(3rem, 10vw, 8rem) 'Italianno'; /* TODO: add fallback font family */
     text-align: center;
     color: #577399;
 }
 
 
-
 /* styling main body */
-main {
-    padding: 1em;
-}
-
-
 .blog-card {
-    margin: 1%;
-    padding: 2.5%;
     background-color: #DAE6F5;
     border-radius: 2%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 0px 0px #000;
+    padding: 0.7rem;
 }
 
 
@@ -63,16 +59,26 @@ main {
 }
 
 
+.quote-block {
+    font: italic 1rem 'Lora', serif;
+    padding: 1rem 0 0 0;
+}
+
+
+.quote-author {
+    font: 0.9rem 'Lora', serif;
+}
+
+
 h3 {
-    font: bold 24px 'Lora' ;
+    font: bold 1.5rem 'Lora', serif ;
     color: #42779D;
 }
 
 
 figcaption {
-    font-size: 14px;
-    font-style: italic;
-    padding: 0.25em;
+    font: italic 0.9rem 'Lora', serif;;
+    padding: 0.25rem;
 }
 
 
@@ -80,50 +86,40 @@ img {
     border-radius: 2%;
 }
 
+
 /* Blog post page main section styling */
-.blog-page-main {
-    margin: 0.5em;
-}
-
-
 .blog-page-intro-parg {
-    text-indent: 1.5em;
+    text-indent: 1.5rem;
 }
 
 
 .blog-page-figure {
     background-color: #DAE6F5;
-    padding: 0.5em;
     border-radius: 2%;
-    margin: 0.7em 0;
+    padding: 0.7rem;
 }
+
 
 /* style sidebar header */
 h5 {
-    font: bold 1em 'Lara';
+    font: bold 1.5rem 'Lora', serif;
 }
 
 
 .list-activites {
     list-style-type: disc;
-    margin-left: 2em;
-}
-
-
-.budjet-header {
-    margin: 0.5em 0;
+    margin-left: 2.5rem;
 }
 
 
 .budjet-table {
     background-color: #DAE6F5;
     border-radius: 3%;
-    width: 100%;
 }
 
 
 th,td {
-    padding: 0.75rem;
+    padding: 0.5rem 1rem;
     vertical-align: top;
 }
 
@@ -139,37 +135,91 @@ thead, th {
 }
 
 
-tbody {
-    border-top: 1.5px solid red;
-} 
+/* Subscribe page*/
+.subscribe-form {
+    max-width: 250px;
+    min-height: 300px;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #DAE6F5;
+    box-shadow: 5px 5px 15px rgb(0,0,0,0.3);
+}
 
 
-aside {
-    padding: 0.5em;
-    margin: 0.8em;
+.form-head {
+    font: bold 1.35rem Arial;
+}
+
+
+.form-parag {
+    font: 0.9rem 'Lora', serif;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 0.2rem 0.5rem 1.2rem 0.2rem;
+}
+
+
+.form-info-safe {
+    font: 0.7rem 'Lora', serif;
+    padding: 1.5rem 0;
+}
+
+
+.form-input {
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    font: 0.9rem 'Lora', serif;
+    min-width: 90%;
+}
+
+
+.subscribe-btn {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 2rem;
+    font: 1.25rem 'Lorea';
+    background-color: #0081a7;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+
+
+.subscribe-btn:hover {
+    transform: scale(1.01); /*Make the dive appear slightly larger*/
+    box-shadow: 5px 5px 15px rgb(0,0,0,0.3); /*add shdow to five effect of being lifting*/
 }
 
 
 .author-greeting {
-    font-size: 13px;
-    margin-left:1em;
+    font-size: 1rem;
+    margin-left: 1em;
 }
 
 
-li {
-    padding-left: 1em;
-    margin: 0.25em;
+.author-name-title-bio {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
 }
 
 
 h4 {
-    font: bold 14px Arial;
-    margin-top: 1em;
+    font: bold 1rem Arial;
 }
 
 
 a {
     color: #577399;
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+aside li {
+    margin-left: 0.7rem;
 }
 
 
@@ -178,12 +228,7 @@ a {
 }
 
 
-footer {
-    padding: 0.5em;
-}
-
-
 .footer-item {
-    /* white-space: nowrap; */
+    font-size: 0.8rem;
     margin-left: 1em; /*TODO: make small gap between them */
 }
